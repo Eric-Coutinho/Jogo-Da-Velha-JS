@@ -1,0 +1,58 @@
+.title {
+    font-family: "Luckiest Guy", sans-serif;
+    font-size: 4em;
+}
+
+.boardBg {
+    background: rgb(23, 44, 63);
+    background: linear-gradient(0deg, rgba(23, 44, 63, 1) 0%, rgba(53, 84, 112, 1) 50%, rgba(103, 139, 163, 1) 100%);
+    border-radius: 20px;
+    padding: 1em 3em;
+    color: white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.player {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.board {
+    background-color: white;
+    width: 100%;
+    padding: 0.6em;
+    border-radius: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    background: rgb(23, 44, 63);
+    background: linear-gradient(0deg, rgba(23, 44, 63, 1) 0%, rgba(53, 84, 112, 1) 50%, rgba(103, 139, 163, 1) 100%);
+}
+
+.grid-cell {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 10em;
+}
+
+.grid-cell:hover {
+    background-color: #d3d3d3;
+}
+
+.boardRow {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+img {
+    height: 100%;
+}
