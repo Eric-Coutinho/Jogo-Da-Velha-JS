@@ -62,7 +62,11 @@ body {
 }
 
 .dev-team li a:hover {
+<<<<<<< HEAD
     color: #483796b7;
+=======
+    color: #4e4479b7;
+>>>>>>> 7afbc0fe224896f7eb56de2c7b5cda1a3108759a
     text-decoration: underline;
 }
 
