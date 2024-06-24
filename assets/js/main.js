@@ -52,7 +52,7 @@ export function startGame() {
     location.href = './game.html';
 }
 
-    function choosePosition(cellId) {
+    export function choosePosition(cellId) {
     if (board[cellId - 1] !== null) 
         return alert('Posição já ocupada. Escolha outra.');
     board[cellId - 1] = currentSymbol;
@@ -67,7 +67,7 @@ export function startGame() {
     }
 }
 
-    function CheckWinner(){
+    export function CheckWinner(){
         const PadraoVitorias = [
             [0,1,2], [3,4,5], [6,7,8], //linha
             [0,3,6], [1,4,7], [2,5,8], //coluna
@@ -83,7 +83,7 @@ export function startGame() {
         return null
     }
 
-    function ResetGame(){
+    export function ResetGame(){
         board.fill(null)
         document.querySelector('.grid-cell').forEach(cell =>cell.innerHTML= '')
         currentSymbol = 'X' 
