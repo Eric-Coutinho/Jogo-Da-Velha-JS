@@ -16,3 +16,9 @@
 li {
     list-style-type: none;
 }
+
+body {
+    background-color: #1a1a2e;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
