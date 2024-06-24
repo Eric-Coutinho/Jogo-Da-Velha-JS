@@ -1,6 +1,6 @@
 .title {
-    font-family: "Luckiest Guy", sans-serif;
-    font-size: 4em;
+    font-size: 3em;
+    margin-bottom: 1em;
 }
 
 .center {
@@ -21,4 +21,51 @@ body {
     background-color: #1a1a2e;
     color: white;
     font-family: 'Orbitron', sans-serif;
+}
+
+.btn-primary {
+    width: 30%;
+    border-radius: 5px;
+    background-color: #1a1a2e;
+    border: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1a1a2e;
+    transform: translateY(-5px);
+}
+
+/* style p equipe de desenvolvimento */
+.card {
+    padding: 1.5em;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.card-title {
+    font-size: 1.5em;
+    color: #0f3460;
+    margin-bottom: 1em;
+}
+
+.dev-team li {
+    margin-bottom: 0.4em;
+}
+
+.dev-team li a {
+    color: #1a1a2e;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.dev-team li a:hover {
+    color: #483796b7;
+    text-decoration: underline;
+}
+
+.hover-shadow {
+    transition: box-shadow 0.2s;
 }
