@@ -1,6 +1,6 @@
 .title {
-    font-family: "Luckiest Guy", sans-serif;
-    font-size: 4em;
+    font-size: 3em;
+    margin-bottom: 1em;
 }
 
 .center {
@@ -21,4 +21,13 @@ body {
     background-color: #1a1a2e;
     color: white;
     font-family: 'Orbitron', sans-serif;
+}
+
+.btn-primary {
+    width: 30%;
+    border-radius: 5px;
+    background-color: #1a1a2e;
+    border: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s, transform 0.3s;
 }
