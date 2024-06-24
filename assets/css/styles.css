@@ -1,6 +1,11 @@
 .title {
+<<<<<<< HEAD
+    font-family: "Luckiest Guy", sans-serif;
+    font-size: 4em;
+=======
     font-size: 3em;
     margin-bottom: 1em;
+>>>>>>> 7afbc0fe224896f7eb56de2c7b5cda1a3108759a
 }
 
 .boardBg {
@@ -65,6 +70,8 @@ body {
     background-color: #1a1a2e;
     color: white;
     font-family: 'Orbitron', sans-serif;
+<<<<<<< HEAD
+=======
 }
 
 .nav-link {
@@ -77,4 +84,5 @@ body {
 .nav-link:hover {
     background-color: #483796b7;
     transform: scale(1.05);
+>>>>>>> 7afbc0fe224896f7eb56de2c7b5cda1a3108759a
 }
