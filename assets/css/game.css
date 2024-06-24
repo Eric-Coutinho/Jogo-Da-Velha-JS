@@ -31,3 +31,8 @@ body {
     padding: 0.5em 1em;
     transition: background-color 0.3s, transform 0.3s;
 }
+
+.btn-primary:hover {
+    background-color: #1a1a2e;
+    transform: translateY(-5px);
+}
