@@ -1,5 +1,10 @@
 import { Player } from "./Player.js";
 
+
+let currentSymbol = 'X';
+let board = Array(9).fill(null);
+
+
 export function startGame() {
     let storedPlayers = localStorage.getItem('players');
     let players = storedPlayers ? JSON.parse(storedPlayers) : [];
@@ -39,9 +44,22 @@ export function startGame() {
         players.push(player2);
     }
 
+
+    
+
     localStorage.setItem('players', JSON.stringify(players));
 
     location.href = './game.html';
 }
 
+    function choosePosition(cellId) {
+    if (board[cellId - 1] !== null) 
+        return alert('Posição já ocupada. Escolha outra.');
+    board[cellId - 1] = currentSymbol;
+    document.getElementById(`cell-${cellId}`).innerHTML = `<img src="assets/Img/${currentSymbol}.png">`;
+}
+
+
+
 window.startGame = startGame;
+window.choosePosition = choosePosition;
