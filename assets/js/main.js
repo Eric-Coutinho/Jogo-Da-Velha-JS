@@ -52,7 +52,7 @@ export function startGame() {
     location.href = './game.html';
 }
 
-    export function choosePosition(cellId) {
+export function choosePosition(cellId) {
     if (board[cellId - 1] !== null) 
         return alert('Posição já ocupada. Escolha outra.');
     board[cellId - 1] = currentSymbol;
