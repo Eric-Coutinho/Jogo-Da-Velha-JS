@@ -15,3 +15,7 @@ Esse projeto foi desenvolvido pelos alunos:
 [Mohannad Majid](https://github.com/mmajid7) / 23361552-2 
 
 [Peter Junior](https://github.com/swazera) / 23225652-2 
+
+
+## Dificuldades
+Eric: Minhas maiores dificuldades foram gerenciar o repositório no github e ajudar os outros integrantes a usar a plataforma de forma organizada, utilizando branches e lidando com pull requests. Além disso, não estava familiarizada com POO em javascript mas após algumas pesquisas e estudos consegui compreender como a linguagem lida com objetos e classes.
