@@ -32,3 +32,6 @@ Leonardo: Ao final do trabalho, senti que a maior dificuldade foi adaptar o cód
 
 Peter: Desenvolver o jogo da velha juntamente com a equipe foi bem complicado. Fiquei principalmente com a parte do CSS, que deu bastante trabalho. 
 Usar o GitHub para dar commit foi mais difícil que codar, tive muitos, muitos erros pelo caminho. Mas no geral, foi um processo desafiador, porém aprendi bastante.
+
+Mohannad: A minha maior dificuldade durante o andamento do projeto foi em questão do Git, fazer o commit, onde dava diversos erros que eu não tinha visto, e um pouco de dificuldade na parte que eu fiquei de fazer em javascript. 
+O projeto foi bom para o aprendizado de trabalho em equipe para a conclusao do proprio.
