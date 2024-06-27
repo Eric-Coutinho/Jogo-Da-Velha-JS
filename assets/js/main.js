@@ -1,9 +1,7 @@
 import { Player } from "./Player.js";
 
-
 let currentSymbol = 'X';
 let board = Array(9).fill(null);
-
 
 export function startGame() {
     let storedPlayers = localStorage.getItem('players');
@@ -40,50 +38,47 @@ export function startGame() {
         players.push(player2);
     }
 
-
-
-
     localStorage.setItem('players', JSON.stringify(players));
 
     location.href = './game.html';
 }
 
 export function choosePosition(cellId) {
-    if (board[cellId - 1] !== null) 
+    if (board[cellId - 1] !== null)
         return alert('Posição já ocupada. Escolha outra.');
     board[cellId - 1] = currentSymbol;
     document.getElementById(`cell-${cellId}`).innerHTML = `<img src="assets/Img/${currentSymbol}.png">`;
 
     let winner = CheckWinner()
-    if(winner){
+    if (winner) {
         alert(`O jogador ${winner} venceu!!`)
         ResetGame()
-    } else{
-        currentSymbol = currentSymbol === 'X'? 'O' : 'X';
+    } else {
+        currentSymbol = currentSymbol === 'X' ? 'O' : 'X';
     }
 }
 
-    export function CheckWinner(){
-        const PadraoVitorias = [
-            [0,1,2], [3,4,5], [6,7,8], //linha
-            [0,3,6], [1,4,7], [2,5,8], //coluna
-            [0,4,8], [2,4,6] //diagonal
-        ]
+export function CheckWinner() {
+    const PadraoVitorias = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8], //linha
+        [0, 3, 6], [1, 4, 7], [2, 5, 8], //coluna
+        [0, 4, 8], [2, 4, 6] //diagonal
+    ]
 
-        for (const Padrao of PadraoVitorias) {
-            const [a,b,c] = Padrao
-            if(board[a] && board[a] === board[b] && board[a] === board[c]){
-                return board[a]
-            }
+    for (const Padrao of PadraoVitorias) {
+        const [a, b, c] = Padrao
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+            return board[a]
         }
-        return null
     }
+    return null
+}
 
-    export function ResetGame(){
-        board.fill(null)
-        document.querySelector('.grid-cell').forEach(cell =>cell.innerHTML= '')
-        currentSymbol = 'X' 
-    }
+export function ResetGame() {
+    board.fill(null)
+    document.querySelector('.grid-cell').forEach(cell => cell.innerHTML = '')
+    currentSymbol = 'X'
+}
 
 
 window.startGame = startGame;
