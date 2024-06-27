@@ -26,18 +26,18 @@ export function startGame() {
 
     if (player1AlreadyExists) {
         let existingPlayer1 = new Player(player1AlreadyExists.name, player1AlreadyExists.matches, player1AlreadyExists.wins, player1AlreadyExists.draws, player1AlreadyExists.defeats);
-        existingPlayer1.updateStatus('matches');
+        // existingPlayer1.updateStatus('matches');
         players[players.indexOf(player1AlreadyExists)] = existingPlayer1;
     } else {
-        player1.updateStatus('matches');
+        // player1.updateStatus('matches');
         players.push(player1);
     }
     if (player2AlreadyExists) {
         let existingPlayer2 = new Player(player2AlreadyExists.name, player2AlreadyExists.matches, player2AlreadyExists.wins, player2AlreadyExists.draws, player2AlreadyExists.defeats);
-        existingPlayer2.updateStatus('matches');
+        // existingPlayer2.updateStatus('matches');
         players[players.indexOf(player2AlreadyExists)] = existingPlayer2;
     } else {
-        player2.updateStatus('matches');
+        // player2.updateStatus('matches');
         players.push(player2);
     }
 
