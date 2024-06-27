@@ -15,6 +15,9 @@ export function startGame() {
     if (name1 === name2)
         return alert('Não é possível 2 jogadores com o mesmo nome.');
 
+    localStorage.setItem('name1', name1);
+    localStorage.setItem('name2', name2);
+
     let player1 = new Player(name1);
     let player2 = new Player(name2);
 
@@ -49,11 +52,30 @@ export function choosePosition(cellId) {
     board[cellId - 1] = currentSymbol;
     document.getElementById(`cell-${cellId}`).innerHTML = `<img src="assets/Img/${currentSymbol}.png">`;
 
+    let name1 = localStorage.getItem('name1');
+    let name2 = localStorage.getItem('name2');
+
     let winner = CheckWinner()
     if (winner) {
-        alert(`O jogador ${winner} venceu!!`)
-        ResetGame()
-    } else {
+        setTimeout(() => {
+            alert(`O jogador ${winner} venceu!!`);
+            updatePlayerStats(`${currentSymbol}`, name1, name2);
+            if (confirm('Deseja recomeçar o jogo?'))
+                ResetGame();
+            else
+                location.href = './index.html';
+        }, 100);
+    } else if (board.every(cell => cell !== null)) {
+        setTimeout(() => {
+            alert('O jogo acabou em empate!');
+            updatePlayerStats(null, name1, name2);
+            if (confirm('Deseja recomeçar o jogo?'))
+                ResetGame();
+            else
+                location.href = './index.html';
+        }, 100);
+    }
+    else {
         currentSymbol = currentSymbol === 'X' ? 'O' : 'X';
     }
 }
@@ -68,23 +90,50 @@ export function CheckWinner() {
     for (const Padrao of PadraoVitorias) {
         const [a, b, c] = Padrao
         if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-            return board[a]
+            return board[a];
         }
     }
-    return null
+    return null;
+}
+
+function updatePlayerStats(status, name1, name2) {
+    let storedPlayers = localStorage.getItem('players');
+    let players = storedPlayers ? JSON.parse(storedPlayers) : [];
+
+    let player1 = players.find(player => player.name === name1);
+    let player2 = players.find(player => player.name === name2);
+
+    if (player1 && player2) {
+        if (status === 'X') {
+            player1.wins++;
+            player2.defeats++;
+        } else if (status === 'O') {
+            player2.wins++;
+            player1.defeats++;
+        } else if (status === null) {
+            player1.draws++;
+            player2.draws++;
+        }
+        player1.matches++;
+        player2.matches++;
+    }
+
+    localStorage.setItem('players', JSON.stringify(players));
 }
 
 export function ResetGame() {
-    if(confirm('Deseja mesmo reiniciar o jogo?')) {
-        board.fill(null);
-        document.querySelectorAll('.grid-cell').forEach(cell => cell.innerHTML = '');
-        currentSymbol = 'X';
-    }
+    board.fill(null);
+    document.querySelectorAll('.grid-cell').forEach(cell => cell.innerHTML = '');
+    currentSymbol = 'X';
+}
+
+export function confirmReset() {
+    if (confirm('Deseja mesmo reiniciar o jogo?'))
+        ResetGame();
     else
         return;
 }
 
-
 window.startGame = startGame;
 window.choosePosition = choosePosition;
-window.ResetGame = ResetGame;
+window.confirmReset = confirmReset;
