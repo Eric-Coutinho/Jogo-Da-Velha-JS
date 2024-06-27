@@ -75,9 +75,13 @@ export function CheckWinner() {
 }
 
 export function ResetGame() {
-    board.fill(null)
-    document.querySelector('.grid-cell').forEach(cell => cell.innerHTML = '')
-    currentSymbol = 'X'
+    if(confirm('Deseja mesmo reiniciar o jogo?')) {
+        board.fill(null);
+        document.querySelectorAll('.grid-cell').forEach(cell => cell.innerHTML = '');
+        currentSymbol = 'X';
+    }
+    else
+        return;
 }
 
 
