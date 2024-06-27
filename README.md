@@ -19,3 +19,8 @@ Esse projeto foi desenvolvido pelos alunos:
 
 ## Dificuldades
 Eric: Minhas maiores dificuldades foram gerenciar o repositório no github e ajudar os outros integrantes a usar a plataforma de forma organizada, utilizando branches e lidando com pull requests. Além disso, não estava familiarizada com POO em javascript mas após algumas pesquisas e estudos consegui compreender como a linguagem lida com objetos e classes.
+
+Leonardo: Ao final do trabalho, senti que a maior dificuldade foi adaptar o código para funcionar juntamente com os códigos escritos pelos outros membros da equipe, além de lidar e resolver os erros que ocorriam durante a implementação. Muito dos códigos funcionavam quando eram colocados no JS dentro do arquivo HTML, mas não funcionavam quando eram colocados no arquivo JS.
+
+Peter: Desenvolver o jogo da velha juntamente com a equipe foi bem complicado. Fiquei principalmente com a parte do CSS, que deu bastante trabalho. 
+Usar o GitHub para dar commit foi mais difícil que codar, tive muitos, muitos erros pelo caminho. Mas no geral, foi um processo desafiador, porém aprendi bastante.
