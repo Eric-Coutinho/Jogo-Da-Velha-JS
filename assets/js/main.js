@@ -12,14 +12,10 @@ export function startGame() {
     let name1 = document.getElementById('inputPlayer1').value;
     let name2 = document.getElementById('inputPlayer2').value;
 
-    if (name1.trim().length < 1 && name2.trim().length < 1)
+    if (name1.trim().length < 1 || name2.trim().length < 1)
         return alert('Os jogadores não podem estar vazios.');
-    if (name1 == name2)
+    if (name1 === name2)
         return alert('Não é possível 2 jogadores com o mesmo nome.');
-    else if (name1.trim().length < 1)
-        return alert('O jogador 1 não pode estar vazio.');
-    else if (name2.trim().length < 1)
-        return alert('O jogador 2 não pode estar vazio.');
 
     let player1 = new Player(name1);
     let player2 = new Player(name2);
@@ -63,7 +59,7 @@ export function startGame() {
         alert(`O jogador ${winner} venceu!!`)
         ResetGame()
     } else{
-        currentSymbol = currentSymbol === 'X'? 'O' : 'X'
+        currentSymbol = currentSymbol === 'X'? 'O' : 'X';
     }
 }
 
