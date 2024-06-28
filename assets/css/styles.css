@@ -38,7 +38,7 @@
 
 .grid-cell {
     background-color: #fff;
-    padding: 20px;
+    padding: 1em;
     text-align: center;
     height: 10em;
 }
@@ -55,6 +55,13 @@
 
 img {
     height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    img {
+        max-width: 80%;
+        object-fit: contain;
+    }
 }
 
 li {
