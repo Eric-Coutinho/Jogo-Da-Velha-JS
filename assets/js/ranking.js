@@ -1,19 +1,30 @@
 function carregarJogadoresDoLocalStorage() {
     let players = localStorage.getItem('players')
-
     if (players) {
         players = JSON.parse(players);
+        return players;
     }
     else {
         alert('Nao foi possivel encontrar jogadores');
+        return null;
     }
 }
 
-let players = carregarJogadoresDoLocalStorage();
+let jogadores = carregarJogadoresDoLocalStorage();
 
-function renderizarTabelaDeJogadores() {
+function renderizarTabelaDeJogadores(players) {
     let tableBody = document.getElementById('ranking-body');
     tableBody.innerHTML = '';
+
+    players.sort((a, b) => {
+        if (b.wins !== a.wins)
+            return b.wins - a.wins;
+        if (a.defeats !== b.defeats)
+            return a.defeats - b.defeats;
+        if (a.draws !== b.draws)
+            return a.draws - b.draws;
+        return a.name.localeCompare(b.name);
+    });
 
     for (let i = 0; i < players.length; i++) {
         let player = players[i];
@@ -40,5 +51,6 @@ function renderizarTabelaDeJogadores() {
         tableBody.appendChild(row);
     }
 
-    window.onload = renderPlayersTable;
 }
+
+window.onload = renderizarTabelaDeJogadores(jogadores);

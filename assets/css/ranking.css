@@ -2,16 +2,15 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460) fixed;
-    font-family: "Luckiest Guy", sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .ranking {
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    width: 80%;
-    max-width: 800px;
+    padding: 2em;
+    width: 100%;
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -38,7 +37,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #0f3460;
+    font-family: 'Orbitron', sans-serif;
     margin-bottom: 20px;
     font-size: 2.2em;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
@@ -46,20 +45,25 @@ h1 {
 
 table {
     width: 100%;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
+}
+
+.tabela {
+    width: 100%;
 }
 
 thead th {
     background: rgb(23, 44, 63);
     color: white;
-    padding: 15px;
-    font-size: 1.1em;
+    /* padding: 0.2em 0.5em; */
+    /* font-size: 2em; */
 }
 
 tbody td {
     border-bottom: 1px solid #dddddd;
-    padding: 15px;
+    /* padding: 0.2em 0.5em; */
     text-align: center;
+    /* font-size: 1.5em; */
 }
 
 tbody tr:nth-child(even) {
