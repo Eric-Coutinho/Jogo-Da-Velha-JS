@@ -81,3 +81,21 @@ body {
     background-color: #483796b7;
     transform: scale(1.05);
 }
+
+.grid-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c3e50; 
+    border: 2px solid #34495e; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-height: 80px;
+    min-width: 80px;
+}
+
+.grid-cell img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
